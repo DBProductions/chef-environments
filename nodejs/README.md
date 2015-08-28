@@ -1,4 +1,4 @@
-# kitchen-nodejs
+# nodejs
 
 Simple KitchenCI environment to run a NodeJS application.  
 The `git` and `nodejs` cookbook are used in this example.

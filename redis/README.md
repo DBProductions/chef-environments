@@ -1,4 +1,4 @@
-# kitchen-redis
+# redis
 
 Simple KitchenCI environment to use Redis.  
 The `redisio` cookbook is used in this example.

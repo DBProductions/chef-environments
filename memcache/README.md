@@ -1,4 +1,4 @@
-# kitchen-memcache
+# memcache
 
 Simple KitchenCI environment to use Memcache.  
 The `memcached` cookbook is used in this example.
