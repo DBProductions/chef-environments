@@ -1,0 +1,19 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+  config.vm.provider "virtualbox" do |v|
+    v.customize ["modifyvm", :id, "--memory", 1024]
+  end
+
+  config.vm.define "redis" do |redis_config|
+  	redis_config.vm.hostname = "redis"
+  	redis_config.vm.network "private_network", ip: "192.168.10.5"
+  	redis_config.vm.network "forwarded_port", guest: 6379, host: 6379
+
+    redis_config.vm.provision :chef_zero do |chef|      
+      chef.add_recipe "redisio::default"
+      chef.add_recipe "redisio::enable"
+    end
+  end
+end
