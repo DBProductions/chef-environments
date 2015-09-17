@@ -1,0 +1,8 @@
+source "https://supermarket.chef.io"
+
+metadata
+
+cookbook 'apt'
+cookbook 'runit'
+cookbook 'database'
+cookbook 'mysql'

@@ -1,0 +1,18 @@
+DEPENDENCIES
+  redisenv
+    path: .
+    metadata: true
+  redisio
+  runit
+
+GRAPH
+  build-essential (2.2.3)
+  packagecloud (0.1.0)
+  redisenv (0.1.0)
+    redisio (>= 0.0.0)
+  redisio (2.3.0)
+    build-essential (>= 0.0.0)
+    ulimit (>= 0.1.2)
+  runit (1.7.2)
+    packagecloud (>= 0.0.0)
+  ulimit (0.3.3)

@@ -1,0 +1,20 @@
+DEPENDENCIES
+  memcached
+  memcachedenv
+    path: .
+    metadata: true
+  runit
+
+GRAPH
+  memcached (1.8.0)
+    runit (~> 1.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  memcachedenv (0.1.0)
+    memcached (>= 0.0.0)
+  packagecloud (0.1.0)
+  runit (1.7.2)
+    packagecloud (>= 0.0.0)
+  yum (3.7.1)
+  yum-epel (0.6.2)
+    yum (~> 3.2)
