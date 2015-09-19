@@ -6,7 +6,7 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: ubuntu-12.04
+  - name: ubuntu-14.04
 
 suites:
   - name: default
@@ -22,3 +22,5 @@ suites:
         ["app", "/tmp/app"]
       ]
     attributes:
+      nodejs:
+          version: '4.0.0'
