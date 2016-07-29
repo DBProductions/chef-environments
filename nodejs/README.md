@@ -1,6 +1,6 @@
 # nodejs
 
-Simple KitchenCI environment to run a NodeJS application.  
+Environment to run a NodeJS application.  
 The `git` and `nodejs` cookbook are used in this example.
 
 There is a simple recipe what let you define your NodeJS application settings.  

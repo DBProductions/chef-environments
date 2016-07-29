@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+  config.vm.synced_folder "./data", "/tmp/data"
+
+  config.vm.define "neo4j" do |neo4j_config|
+  	neo4j_config.vm.hostname = "neo4j"
+  	neo4j_config.vm.network "private_network", ip: "192.168.10.5"
+  	neo4j_config.vm.network "forwarded_port", guest: 7474, host: 7474
+  	neo4j_config.vm.provision :chef_zero do |chef|
+      chef.add_recipe "apt::default"
+      chef.add_recipe "java::default"
+      chef.add_recipe "neo4jenv::default"
+    end
+  end
+end

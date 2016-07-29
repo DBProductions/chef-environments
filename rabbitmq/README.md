@@ -1,6 +1,7 @@
-# mysql
+# rabbitmq
 
-Environment to use MySQL.  
+Simple KitchenCI environment to use RabbitMQ.  
+The `rabbitmq` cookbook is used in this example.
 
 ## Test
 

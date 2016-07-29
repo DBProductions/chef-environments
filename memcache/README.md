@@ -1,6 +1,6 @@
 # memcache
 
-Simple KitchenCI environment to use Memcache.  
+Environment to use Memcache.  
 The `memcached` cookbook is used in this example.
 
 ## Test

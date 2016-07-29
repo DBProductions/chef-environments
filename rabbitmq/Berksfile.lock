@@ -1,0 +1,29 @@
+DEPENDENCIES
+  rabbitenv
+    path: .
+    metadata: true
+  rabbitmq (~> 3.3.0)
+
+GRAPH
+  apt (2.6.0)
+  build-essential (2.1.0)
+  erlang (1.5.6)
+    apt (>= 1.7.0)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+    yum-erlang_solutions (>= 0.0.0)
+  packagecloud (0.2.4)
+  rabbitenv (0.1.0)
+    rabbitmq (>= 0.0.0)
+    runit (>= 0.0.0)
+  rabbitmq (3.3.0)
+    erlang (>= 0.9)
+  runit (1.8.0)
+    packagecloud (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  yum (3.4.0)
+  yum-epel (0.5.1)
+    yum (~> 3.0)
+  yum-erlang_solutions (0.2.0)
+    yum (~> 3.0)

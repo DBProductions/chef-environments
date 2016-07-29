@@ -1,0 +1,12 @@
+DEPENDENCIES
+  apt
+  java
+  neo4jenv
+    path: .
+    metadata: true
+
+GRAPH
+  apt (2.6.1)
+  java (1.31.0)
+  neo4jenv (0.0.1)
+    java (>= 0.0.0)

@@ -1,6 +1,6 @@
-# mysql
+# neo4j
 
-Environment to use MySQL.  
+Simple KitchenCI environment to use Neo4J.  
 
 ## Test
 
