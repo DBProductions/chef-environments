@@ -9,18 +9,21 @@ platforms:
   - name: ubuntu-14.04
 
 suites:
-  - name: default
+  - name: master
     run_list:
       - recipe[apt::default]
-      - recipe[java::default]
-      - recipe[neo4jenv::default]
+      - recipe[mongodb::default]
+      - recipe[mongodbenv::default]
     driver_config:
       network:
       - ["private_network", {ip: "192.168.10.5"}]
-      - ["forwarded_port", {guest: 7474, host: 7474, auto_correct: true}]
+      - ["forwarded_port", {guest: 27017, host: 27017, auto_correct: true}]
       synced_folders: [
         ["data", "/tmp/data"]
       ]
     attributes:
-      java:
-        jdk_version: "7"
+      mongodb:
+        config:
+          port: 27017
+          smallfiles: true
+          auth: false

@@ -1,9 +1,0 @@
-{
-    "name": "kitchen-nodejs",
-    "version": "0.0.1",
-    "description": "NodeJS application in a Kitchen environment.",
-    "repository": "https://github.com/DBProductions/kitchen-nodejs",
-    "dependencies": {
-        "express": "~3.4"
-    }
-}

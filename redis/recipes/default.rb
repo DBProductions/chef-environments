@@ -7,3 +7,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+service "redisMyRedis" do
+  action [:restart]
+end

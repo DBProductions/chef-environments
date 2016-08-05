@@ -13,6 +13,7 @@ suites:
     run_list:
       - recipe[redisio::default]
       - recipe[redisio::enable]
+      - recipe[redisenv::default]
     driver_config:
       network:
       - ["private_network", {ip: "192.168.10.5"}]
@@ -21,6 +22,7 @@ suites:
       redisio:
         servers: [
           {
-            port: 6379
+            port: 6379,
+            name: "MyRedis"
           }
         ]

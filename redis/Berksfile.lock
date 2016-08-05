@@ -10,6 +10,7 @@ GRAPH
   packagecloud (0.1.0)
   redisenv (0.1.0)
     redisio (>= 0.0.0)
+    runit (>= 0.0.0)
   redisio (2.3.0)
     build-essential (>= 0.0.0)
     ulimit (>= 0.1.2)

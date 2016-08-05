@@ -3,7 +3,7 @@
 # Cookbook Name:: memcachedenv
 # Attributes:: default
 #
-# Copyright 2015, DBProductions
+# Copyright 2016, DBProductions
 #
 # All rights reserved - Do Not Redistribute
 #
