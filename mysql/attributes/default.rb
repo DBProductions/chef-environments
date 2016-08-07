@@ -7,3 +7,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+default['mysqlenv']['version'] = '5.5'
+default['mysqlenv']['database'] = 'mydb'
