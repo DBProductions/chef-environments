@@ -9,7 +9,7 @@ describe port('6379') do
   it { should be_listening }
 end
 
-describe file('/etc/redis/6379.conf') do
+describe file('/etc/redis/redis.conf') do
   it { should be_file }
   it { should be_readable }
   it { should be_mode 644 }

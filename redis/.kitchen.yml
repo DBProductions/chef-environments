@@ -23,6 +23,7 @@ suites:
         servers: [
           {
             port: 6379,
-            name: "MyRedis"
+            name: "redis",
+            requirepass: "1234"
           }
         ]

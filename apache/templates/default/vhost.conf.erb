@@ -1,0 +1,38 @@
+<VirtualHost *:<%= @params[:server_port] || node['apache']['listen_ports'][0] %>>
+  ServerName <%= @params[:server_name] %>
+  ServerAlias <% @params[:server_aliases].each do |a| %><%= a %> <% end %>
+  DocumentRoot <%= @params[:docroot] %>
+  RewriteEngine Off
+
+  <Directory <%= @params[:docroot] %>>
+    Options <%= [@params[:directory_options] || "FollowSymLinks" ].flatten.join " " %>
+    AllowOverride <%= [@params[:allow_override] || "None" ].flatten.join " " %>
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  <Directory />
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+
+  <Location /server-status>
+    SetHandler server-status
+
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+  </Location>
+
+  LogLevel info
+  ErrorLog <%= node['apacheenv']['log_dir'] %>/<%= @params[:name] %>-error.log
+  CustomLog <%= node['apacheenv']['log_dir'] %>/<%= @params[:name] %>-access.log combined
+
+  <% if @params[:directory_index] -%>
+  DirectoryIndex <%= [@params[:directory_index]].flatten.join " " %>
+  <% end -%>
+
+  ErrorDocument 403 /error/403/index.html
+  ErrorDocument 404 /error/404/index.html
+  ErrorDocument 500 /error/500/index.html
+</VirtualHost>
